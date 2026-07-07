@@ -1,26 +1,50 @@
 # Network Packet Analyzer
 
-A real-time network packet capture and analysis tool built with Python (Scapy) and Flask.
+A real-time network packet capture tool built with Python (Scapy) and Flask. Captures live traffic from a network interface, classifies packets by protocol, and displays them through a web dashboard.
 
-## What it does
-- Captures live network traffic from your network interface
-- Identifies TCP, UDP, and ICMP packets
-- Extracts source IP, destination IP, protocol, length, and timestamp
-- Displays packets in real time through a web-based dashboard
+> The backend packet capture logic is written in Python using Scapy. The frontend dashboard UI was built with AI assistance.
+
+---
+
+## Features
+
+- Live packet capture from your network interface
+- TCP, UDP, and ICMP protocol detection
+- Source and destination IP extraction with timestamps
+- Packet length tracking
+- Web-based dashboard to view traffic in real time
+
+---
 
 ## Tech Stack
-- Python 3
-- Scapy (packet capture)
-- Flask (backend API)
-- HTML/CSS/JavaScript (frontend dashboard)
 
-## How to run
+- Python 3 + Scapy — packet capture and processing
+- Flask — backend API
+- HTML, CSS, JavaScript — frontend dashboard
+
+---
+
+## How to Run
+
+```bash
 pip install -r requirements.txt
 sudo python3 app.py
+```
 
-Then open your browser at http://localhost:5000
+Open your browser at http://localhost:5000
 
-## What I learned
-- How packets are structured at the IP/TCP/UDP layer
+> sudo is required for raw packet capture access
+
+---
+
+---
+
+## What I Learned
+
+- How packets are structured at the IP, TCP, UDP, and ICMP layers
 - How to use Scapy to capture and parse real network traffic
-- How to serve live data from a Python backend to a web frontend.
+- How to expose live data from a Python backend to a web frontend via Flask
+
+---
+
+> Built for educational purposes. All capture performed on local interfaces only.
